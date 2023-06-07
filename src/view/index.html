@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Image Uploader</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      background: #ffffff;
+    }
+
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="file"], button {
+      margin: 20px 0;
+      padding: 10px;
+      background: linear-gradient(to right, #4c2e72, #a064a1);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    input[type="file"]:hover, button:hover {
+      box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background: linear-gradient(to right, #4CAF50, #80d6a4);
+    }
+
+    .preview {
+      margin-top: 20px;
+      max-width: 300px;
+      max-height: 300px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="./renderer.js"></script>
+
+  <div class="container">
+    <div class="left">
+      <input type="file" id="file-input">
+      <button id="upload-button">Upload</button>
+    </div>
+    <div class="right">
+      <img id="preview" class="preview" src="#" alt="Preview">
+    </div>
+  </div>
+</body>
+
+</html>
